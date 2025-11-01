@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DataHaven</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    body { background-color: #0a0a0a; color: #f0f0f0; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.85); display: flex; justify-content: space-between; align-items: center; padding: 1rem 3rem; z-index: 1000; }
+    nav .logo { font-weight: 700; font-size: 1.5rem; color: #4cafeb; }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav ul li a:hover { color: #4cafeb; }
+    header { height: 100vh; background: url('https://drive.google.com/uc?export=view&id=1b1sSAz4NDbUUTMEih0WlCCAcvWo8XE5O') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+    header::after { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); }
+    header .content { position: relative; z-index: 1; max-width: 900px; }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; color: #4cafeb; }
+    header p { font-size: 1.3rem; margin-bottom: 2rem; }
+    header .btn { padding: 0.8rem 2rem; background: #4cafeb; color: #fff; border: none; font-size: 1rem; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+    header .btn:hover { background: #3a8adf; }
+
+    section { padding: 5rem 3rem; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2.2rem; margin-bottom: 1.5rem; color: #4cafeb; }
+    section p { margin-bottom: 1rem; color: #e0e0e0; }
+    .feature { background: #111; padding: 2rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+
+    footer { background: #111; text-align: center; padding: 2rem 1rem; margin-top: 3rem; color: #888; }
+
+    .moose, .owl { position: absolute; width: 100px; opacity: 0.85; }
+    .moose { bottom: 10px; left: 10px; }
+    .owl { top: 10px; right: 10px; }
+
+    @media(max-width:768px){
+        nav ul { flex-direction: column; background: rgba(10,10,10,0.95); position: absolute; top: 100%; left: 0; width: 100%; display: none; }
+        nav ul.active { display: flex; }
+        nav .menu-toggle { display: block; cursor: pointer; color: #4cafeb; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">DataHaven</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#usecases">Use Cases</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <img src="moose-cartoon.png" class="moose" alt="Moose">
+    <img src="owl-cartoon.png" class="owl" alt="Owl">
+    <div class="content">
+        <h1>🔮 Artificial Intelligence: Storage and Sharing of AI Training Models</h1>
+        <p>Decentralized, tamper-proof and verifiable AI model storage with privacy & compliance.</p>
+        <button class="btn">Join DataHaven</button>
+    </div>
+</header>
+
+<section id="about">
+    <h2>About DataHaven</h2>
+    <p>As AI models continue to become the core of innovation, concerns around control, censorship, and integrity are increasing. Centralized AI model providers can decide which models or responses are allowed — leading to issues of bias and restricted access.</p>
+    <p>AI developers need a system where their models remain unmodified and verifiable when distributed for inference.</p>
+</section>
+
+<section id="features">
+    <h2>Features</h2>
+
+    <div class="feature">
+        <h3>💾 Tamper-Proof Storage</h3>
+        <p>DataHaven uses Merkle Tries to verify data. Each AI model is broken into hashed segments to create a Merkle Trie — the root hash is stored on-chain.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🗄️ Storage Providers</h3>
+        <p>Fast-access Primary Storage Providers and encrypted Backup Storage Providers ensure model availability and reliability.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🔐 Proof of Integrity</h3>
+        <p>Model creators can verify that the model used for inference is exactly the same as the original uploaded version.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🧠 Federated Learning & Fine-Tuning Verification</h3>
+        <p>Training datasets and fine-tuning logs are stored to detect malicious changes.</p>
+    </div>
+
+    <div class="feature">
+        <h3>💻 Verifiable AI-Generated Code & Software Artifacts</h3>
+        <p>On-chain hashing, versioning, and tamper-proof testing ensure code transparency and reliability.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🛡️ Privacy of AI Agent Data</h3>
+        <p>End-to-end encryption and smart-contract access controls keep data private and secure.</p>
+    </div>
+
+    <div class="feature">
+        <h3>💰 Decentralized Data Marketplaces</h3>
+        <p>Data tokenization, AI agent trading, and fair compensation mechanisms enable open markets.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🧾 Data Provenance Tracking</h3>
+        <p>On-chain proofs and tamper tracking enable verification of the origin of AI-generated content.</p>
+    </div>
+</section>
+
+<section id="usecases">
+    <h2>Use Cases</h2>
+    <p>Finance, Healthcare, Biotech, NFTs, DeFi, Real Estate, and AI DAOs benefit from secure storage and verifiable data solutions.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact / Join</h2>
+    <p>Interested in joining DataHaven? Reach out to us!</p>
+    <form>
+        <input type="text" placeholder="Your Name" required style="padding:0.5rem;margin-bottom:0.5rem;width:100%;border-radius:5px;border:none;">
+        <input type="email" placeholder="Your Email" required style="padding:0.5rem;margin-bottom:0.5rem;width:100%;border-radius:5px;border:none;">
+        <textarea placeholder="Message" required style="padding:0.5rem;margin-bottom:0.5rem;width:100%;border-radius:5px;border:none;"></textarea>
+        <button type="submit" class="btn">Send</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 DataHaven. All Rights Reserved.
+</footer>
+
+</body>
+</html>
